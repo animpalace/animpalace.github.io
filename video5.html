@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Effects Test</title>
+   <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@700&display=swap" rel="stylesheet">
+   <link rel="icon" href="com.polygauze.animate.palace/assets/animate_palace_icon.ico" type="image/x-icon">
+  <body>
+
+  <a href=https://polygauze.github.io/><img src="com.polygauze.animate.palace/assets/animate_palace_ver_new.png"Class="main">
+     <hr class="divider2"></a>
+
+     <center>
+   <video controls width="921" height="518">
+       <source src="com.polygauze.animate.palace/animations/effectstest.mp4">
+     </video>
+
+<center>
+  Effects Test
+</center>
+<br>
+
+<style>
+body {
+ background-color: #303030;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 70%;
+  border: none;
+  font-family: "Playpen Sans", sans-serif;
+  text-align: left;
+  font-size: 17px
+}
+
+.active, .collapsible:hover {
+  background-color: #444;
+}
+
+.content {
+  width: 70%;
+  background-color: #202020;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+<body>
+
+<button type="button" class="collapsible">Description</button>
+<div class="content">
+  <p>My byfar favourite animation, an animation test based on dust to show contact with objects improved with dust to really show impact.</p>
+</div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+</body>
+<html>
